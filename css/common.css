@@ -1,0 +1,198 @@
+.wrapper {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.shortch {
+  height: 52px;
+  background-color: #333;
+}
+.shortch .wrapper {
+  height: 52px;
+}
+.shortch .wrapper ul {
+  float: right;
+}
+.shortch .wrapper ul li {
+  float: left;
+  line-height: 52px;
+}
+.shortch .wrapper ul li a {
+  padding: 0 16px;
+  border-right: 1px solid #666;
+  font-size: 14px;
+  color: #cdcdcd;
+}
+.shortch .wrapper ul li a span {
+  display: inline-block;
+  margin-right: 8px;
+  width: 11px;
+  height: 16px;
+  background-image: url(../image/sprites.png);
+  background-position: -160px -70px;
+  vertical-align: middle;
+}
+.shortch .wrapper ul li:last-child a {
+  border-right: none;
+}
+
+.header {
+  margin: 30px auto;
+  height: 70px;
+}
+.header .logo {
+  float: left;
+  width: 207px;
+  height: 70px;
+}
+.header .logo h1 {
+  width: 207px;
+  height: 70px;
+}
+.header .logo h1 a {
+  display: block;
+  width: 207px;
+  height: 70px;
+  background-image: url(../image/logo.png);
+  background-size: contain;
+  font-size: 0;
+}
+.header .nav {
+  float: left;
+  margin-left: 40px;
+  height: 70px;
+}
+.header .nav li {
+  float: left;
+  margin-right: 48px;
+  line-height: 70px;
+}
+.header .nav li a {
+  padding-bottom: 7px;
+}
+.header .nav li a:hover {
+  color: #27ba9b;
+  border-bottom: 1px solid #27ba9b;
+}
+.header .search {
+  position: relative;
+  float: left;
+  margin: 24px 0 0 34px;
+  width: 172px;
+  height: 30px;
+  border-bottom: 2px solid #e7e7e7;
+}
+.header .search span {
+  position: absolute;
+  left: 2px;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  background-image: url(../image/sprites.png);
+  background-position: -80px -70px;
+}
+.header .search input {
+  width: 172px;
+  height: 28px;
+  padding-left: 30px;
+}
+.header .search input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #ccc;
+}
+.header .search input::-moz-placeholder {
+  font-size: 14px;
+  color: #ccc;
+}
+.header .search input:-ms-input-placeholder {
+  font-size: 14px;
+  color: #ccc;
+}
+.header .search input::-ms-input-placeholder {
+  font-size: 14px;
+  color: #ccc;
+}
+.header .search input::placeholder {
+  font-size: 14px;
+  color: #ccc;
+}
+.header .car {
+  position: relative;
+  float: left;
+  margin: 28px 0 0 15px;
+  width: 23px;
+  height: 23px;
+  background-image: url(../image/sprites.png);
+  background-position: -120px -70px;
+}
+.header .car span {
+  position: absolute;
+  top: -6px;
+  right: -13px;
+  width: 20px;
+  height: 15px;
+  background-color: #e26237;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  line-height: 15px;
+}
+
+.footer {
+  height: 342px;
+  background-color: #333;
+}
+.footer .wrapper {
+  width: 1393px;
+}
+.footer .wrapper .top {
+  padding-top: 60px;
+  padding-left: 135px;
+  height: 175px;
+  border-bottom: 3px solid #434343;
+}
+.footer .wrapper .top li {
+  position: relative;
+  float: left;
+  margin-right: 300px;
+  width: 192px;
+  height: 58px;
+  line-height: 58px;
+}
+.footer .wrapper .top li:last-child {
+  margin-right: 0;
+}
+.footer .wrapper .top li::before {
+  position: absolute;
+  content: "";
+  width: 58px;
+  height: 58px;
+  background-image: url(../image/sprites.png);
+  vertical-align: middle;
+}
+.footer .wrapper .top li:nth-child(2)::before {
+  background-position: -130px 0;
+}
+.footer .wrapper .top li:last-child::before {
+  background-position: -65px 0;
+}
+.footer .wrapper .top span {
+  float: right;
+  font-size: 28px;
+  color: #fff;
+}
+.footer .wrapper .bottom {
+  padding-top: 40px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+.footer .wrapper .bottom a {
+  padding-top: 40px;
+  font-size: 14px;
+  color: #999;
+}
+.footer .wrapper .bottom p {
+  padding-bottom: 20px;
+}

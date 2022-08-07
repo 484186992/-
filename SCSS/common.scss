@@ -1,0 +1,213 @@
+// 各个网页相同模块的重复的样式
+
+// 版心
+
+.wrapper {
+  width: 1240px;
+  margin: 0 auto;
+}
+
+// 快捷导航
+.shortch {
+  height: 52px;
+  background-color: #333;
+  .wrapper {
+    height: 52px;
+    // background-color: pink;
+    ul {
+      float: right;
+      li {
+        float: left;
+        line-height: 52px;
+        a {
+          padding: 0 16px;
+          border-right: 1px solid #666;
+          font-size: 14px;
+          color: #cdcdcd;
+          span {
+            display: inline-block;
+            margin-right: 8px;
+            width: 11px;
+            height: 16px;
+            background-image: url(../image/sprites.png);
+            background-position: -160px -70px;
+
+            vertical-align: middle;
+          }
+        }
+      }
+      li:last-child a {
+        border-right: none;
+      }
+    }
+  }
+}
+
+// 头部
+.header {
+  margin: 30px auto;
+  height: 70px;
+  //   background-color: pink;
+  .logo {
+    float: left;
+    width: 207px;
+    height: 70px;
+    // background-color: pink;
+
+    // logo 搜索引擎优化做法
+    h1 {
+      width: 207px;
+      height: 70px;
+      a {
+        display: block;
+        width: 207px;
+        height: 70px;
+        background-image: url(../image/logo.png);
+
+        background-size: contain;
+
+        // 字号设为0 目的：让 h1 里面的字看不见
+        font-size: 0;
+      }
+    }
+  }
+  .nav {
+    float: left;
+    margin-left: 40px;
+    height: 70px;
+    // background-color: pink;
+    li {
+      float: left;
+      margin-right: 48px;
+      line-height: 70px;
+      a {
+        padding-bottom: 7px;
+      }
+      a:hover {
+        color: #27ba9b;
+        border-bottom: 1px solid #27ba9b;
+      }
+    }
+  }
+  .search {
+    position: relative;
+    float: left;
+    margin: 24px 0 0 34px;
+    width: 172px;
+    height: 30px;
+    // background-color: green;
+    border-bottom: 2px solid #e7e7e7;
+
+    span {
+      // 绝对定位  所以宽高生效
+      position: absolute;
+      left: 2px;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      background-image: url(../image/sprites.png);
+      background-position: -80px -70px;
+    }
+
+    input {
+      width: 172px;
+      height: 28px;
+      padding-left: 30px;
+    }
+    input::placeholder {
+      font-size: 14px;
+      color: #ccc;
+    }
+  }
+  .car {
+    position: relative;
+    float: left;
+    margin: 28px 0 0 15px;
+    width: 23px;
+    height: 23px;
+    // background-color: orange;
+
+    background-image: url(../image/sprites.png);
+    background-position: -120px -70px;
+
+    span {
+      position: absolute;
+      top: -6px;
+      right: -13px;
+      width: 20px;
+      height: 15px;
+      background-color: #e26237;
+      border-radius: 8px;
+
+      font-size: 13px;
+      color: #fff;
+      text-align: center;
+      line-height: 15px;
+    }
+  }
+}
+
+// 版权区域
+.footer {
+  height: 342px;
+  background-color: #333;
+  .wrapper {
+    width: 1393px;
+    .top {
+      padding-top: 60px;
+      padding-left: 135px;
+      height: 175px;
+      border-bottom: 3px solid #434343;
+
+      li {
+        position: relative;
+        float: left;
+        margin-right: 300px;
+        width: 192px;
+        height: 58px;
+        line-height: 58px;
+        // background-color: pink;
+      }
+      li:last-child {
+        margin-right: 0;
+      }
+
+      //   伪元素添加的标签  行内
+      li::before {
+        position: absolute;
+        content: "";
+        width: 58px;
+        height: 58px;
+        background-image: url(../image/sprites.png);
+        vertical-align: middle;
+      }
+      //   修改第二个精灵图
+      li:nth-child(2)::before {
+        background-position: -130px 0;
+      }
+      //   修改最后一个精灵图
+      li:last-child::before {
+        background-position: -65px 0;
+      }
+      span {
+        float: right;
+        font-size: 28px;
+        color: #fff;
+      }
+    }
+    .bottom {
+      padding-top: 40px;
+      font-size: 14px;
+      color: #999;
+      text-align: center;
+      a {
+        padding-top: 40px;
+        font-size: 14px;
+        color: #999;
+      }
+      p {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
