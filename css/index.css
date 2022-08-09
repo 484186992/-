@@ -1,3 +1,19 @@
+.fresh .hd .more, .goods .hd a {
+  float: right;
+  color: #999;
+}
+.fresh .hd .more::after, .goods .hd a::after {
+  content: "";
+  display: inline-block;
+  margin-top: -4px;
+  margin-left: 15px;
+  width: 7px;
+  height: 13px;
+  background-image: url(../image/sprites.png);
+  background-position: 0 -110px;
+  vertical-align: middle;
+}
+
 .banner {
   height: 500px;
   background-color: #f5f5f5;
@@ -49,4 +65,205 @@
 }
 .banner .wrapper .aside ul li a:hover {
   background-color: #27ba9b;
+}
+.banner .wrapper .prev,
+.banner .wrapper .next {
+  position: absolute;
+  top: 228px;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-image: url(../image/sprites.png);
+  border-radius: 50%;
+}
+.banner .wrapper .prev {
+  left: 260px;
+  background-position: 15px -60px;
+}
+.banner .wrapper .next {
+  right: 10px;
+  background-position: -23px -60px;
+}
+.banner .wrapper ol {
+  position: absolute;
+  left: 680px;
+  bottom: 38px;
+  height: 10px;
+}
+.banner .wrapper ol li {
+  float: left;
+  margin-right: 24px;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.banner .wrapper ol li.current {
+  background-color: #fff;
+}
+
+.goods .hd {
+  height: 115px;
+  line-height: 115px;
+  overflow: hidden;
+}
+.goods .hd h2 {
+  float: left;
+  font-size: 29px;
+  font-weight: normal;
+}
+.goods .hd h2 span {
+  margin-left: 35px;
+  font-size: 16px;
+  color: #999;
+}
+.goods .bd li {
+  position: relative;
+  float: left;
+  margin-right: 8px;
+  width: 304px;
+  height: 405px;
+  background-color: #f0f9f4;
+  text-align: center;
+}
+.goods .bd li img {
+  width: 304px;
+}
+.goods .bd li h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: normal;
+}
+.goods .bd li div {
+  margin-top: 10px;
+  font-size: 17px;
+  color: #9a2e1f;
+}
+.goods .bd li div span {
+  font-size: 23px;
+}
+.goods .bd li b {
+  position: absolute;
+  left: 17px;
+  top: 18px;
+  width: 28px;
+  height: 50px;
+  border: 1px solid #27ba9b;
+  border-radius: 10%;
+  font-size: 18px;
+  color: #27ba9b;
+  font-weight: normal;
+  line-height: 24px;
+}
+.goods .bd li:last-child {
+  margin-right: 0;
+}
+
+.fresh .hd {
+  height: 95px;
+  line-height: 95px;
+}
+.fresh .hd h2 {
+  float: left;
+  font-size: 29px;
+  font-weight: normal;
+}
+.fresh .hd ul {
+  float: right;
+  margin-right: 58px;
+}
+.fresh .hd ul li {
+  float: left;
+}
+.fresh .hd ul li a {
+  padding: 2px 7px;
+  margin-left: 6px;
+}
+.fresh .hd ul li a:hover {
+  background-color: #27ba9b;
+}
+.fresh .bd .left {
+  float: left;
+  width: 240px;
+  height: 610px;
+}
+.fresh .bd .right {
+  float: right;
+  padding-left: 8px;
+  width: 1000px;
+  height: 610px;
+}
+.fresh .bd .right ul li {
+  position: relative;
+  float: left;
+  margin-right: 8px;
+  width: 242px;
+  height: 304px;
+  border: 2px solid #fff;
+}
+.fresh .bd .right ul li:nth-child(4n) {
+  margin-right: 0;
+}
+.fresh .bd .right ul li:nth-child(n+5) {
+  margin-top: 2px;
+}
+.fresh .bd .right ul li img {
+  width: 184px;
+  margin-bottom: 12px;
+  clear: both;
+  display: block;
+  margin: 8px auto 0;
+  padding-bottom: 12px;
+}
+.fresh .bd .right ul li .text {
+  margin-left: 29px;
+}
+.fresh .bd .right ul li .text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 20px;
+}
+.fresh .bd .right ul li .text span {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 17px;
+  color: #9a2e1f;
+}
+.fresh .bd .right ul li .text span b {
+  font-size: 22px;
+  font-weight: normal;
+}
+.fresh .bd .right ul li:hover {
+  border: 2px solid #27ba9b;
+}
+.fresh .bd .right ul li:hover .box {
+  display: block;
+}
+.fresh .bd .right ul li .box {
+  position: absolute;
+  top: 218px;
+  width: 238px;
+  height: 84px;
+  background-color: #27ba9b;
+  text-align: center;
+  display: none;
+}
+.fresh .bd .right ul li .box span {
+  display: inline-block;
+  padding: 0 35px;
+  margin-top: 19px;
+  font-size: 18px;
+  border-bottom: 2px solid #a9dbcc;
+}
+.fresh .bd .right ul li .box span a {
+  color: #fff;
+}
+.fresh .bd .right ul li .box b {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: normal;
+}
+.fresh .bd .right ul li .box b a {
+  color: #fff;
 }
