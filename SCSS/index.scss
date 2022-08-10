@@ -1,5 +1,27 @@
 // index 样式
 
+// 占位符  应用在产品列表的标题
+%title {
+  height: 115px;
+  line-height: 115px;
+  // 溢出隐藏
+  overflow: hidden;
+  h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: normal;
+    span {
+      margin-left: 35px;
+      font-size: 16px;
+      color: #999;
+    }
+  }
+  a {
+    // @extend 继承
+    @extend %view_all;
+  }
+}
+
 // 占位符  应用在产品列表的标题（ 查看全部 ）
 %view_all {
   float: right;
@@ -121,24 +143,8 @@
 .goods {
   // 头部
   .hd {
-    height: 115px;
-    line-height: 115px;
-    // 溢出隐藏
-    overflow: hidden;
-    h2 {
-      float: left;
-      font-size: 29px;
-      font-weight: normal;
-      span {
-        margin-left: 35px;
-        font-size: 16px;
-        color: #999;
-      }
-    }
-    a {
-      // @extend 继承
-      @extend %view_all;
-    }
+    // 调用 title
+    @extend %title;
   }
 
   //   内容
@@ -192,6 +198,106 @@
   }
 }
 
+// 人气推荐
+.popular {
+  // 头部
+  .hd {
+    // 调用 title
+    @extend %title;
+  }
+
+  // 内容
+  .bd {
+    ul {
+      text-align: center;
+      li {
+        float: left;
+        margin-right: 8px;
+        width: 304px;
+        height: 405px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        img {
+          width: 304px;
+        }
+        p {
+          margin-top: 20px;
+          font-size: 21px;
+          color: #333;
+        }
+        span {
+          display: inline-block;
+          margin-top: 10px;
+          font-size: 16px;
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+// 热门品牌
+.brand {
+  //   height: 465px;
+  background-color: #f5f5f5;
+  .box {
+    // 头部
+    .hd {
+      @extend %title;
+      position: relative;
+      .paging {
+        // 居中
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0%, -50%);
+
+        width: 52px;
+        height: 20px;
+        // background-color: pink;
+        div {
+          width: 20px;
+          height: 20px;
+          background-color: #e2e2e2;
+          &:hover {
+            background-color: #27ba9b;
+          }
+        }
+        .left {
+          float: left;
+          background-image: url(../image/sprites.png);
+          background-position: -86px -105px;
+        }
+        .right {
+          float: right;
+          background-image: url(../image/sprites.png);
+          background-position: -73px -105px;
+        }
+      }
+    }
+
+    // 内容
+    .bd {
+      ul {
+        li {
+          float: left;
+          padding-bottom: 45px;
+          margin-right: 5px;
+          &:last-child {
+            margin-right: 0;
+          }
+          img {
+            width: 244px;
+          }
+        }
+      }
+    }
+  }
+}
+
 // 生鲜
 .fresh {
   .hd {
@@ -228,8 +334,10 @@
   .bd {
     .left {
       float: left;
-      width: 240px;
-      height: 610px;
+      img {
+        width: 240px;
+        height: 610px;
+      }
       //   background-color: pink;
     }
     .right {

@@ -1,8 +1,23 @@
-.fresh .hd .more, .goods .hd a {
+.brand .box .hd, .popular .hd, .goods .hd {
+  height: 115px;
+  line-height: 115px;
+  overflow: hidden;
+}
+.brand .box .hd h2, .popular .hd h2, .goods .hd h2 {
+  float: left;
+  font-size: 29px;
+  font-weight: normal;
+}
+.brand .box .hd h2 span, .popular .hd h2 span, .goods .hd h2 span {
+  margin-left: 35px;
+  font-size: 16px;
+  color: #999;
+}
+.fresh .hd .more, .brand .box .hd a, .popular .hd a, .goods .hd a {
   float: right;
   color: #999;
 }
-.fresh .hd .more::after, .goods .hd a::after {
+.fresh .hd .more::after, .brand .box .hd a::after, .popular .hd a::after, .goods .hd a::after {
   content: "";
   display: inline-block;
   margin-top: -4px;
@@ -103,21 +118,6 @@
   background-color: #fff;
 }
 
-.goods .hd {
-  height: 115px;
-  line-height: 115px;
-  overflow: hidden;
-}
-.goods .hd h2 {
-  float: left;
-  font-size: 29px;
-  font-weight: normal;
-}
-.goods .hd h2 span {
-  margin-left: 35px;
-  font-size: 16px;
-  color: #999;
-}
 .goods .bd li {
   position: relative;
   float: left;
@@ -160,6 +160,78 @@
   margin-right: 0;
 }
 
+.popular .bd ul {
+  text-align: center;
+}
+.popular .bd ul li {
+  float: left;
+  margin-right: 8px;
+  width: 304px;
+  height: 405px;
+}
+.popular .bd ul li:last-child {
+  margin-right: 0;
+}
+.popular .bd ul li img {
+  width: 304px;
+}
+.popular .bd ul li p {
+  margin-top: 20px;
+  font-size: 21px;
+  color: #333;
+}
+.popular .bd ul li span {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #999;
+}
+
+.brand {
+  background-color: #f5f5f5;
+}
+.brand .box .hd {
+  position: relative;
+}
+.brand .box .hd .paging {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  width: 52px;
+  height: 20px;
+}
+.brand .box .hd .paging div {
+  width: 20px;
+  height: 20px;
+  background-color: #e2e2e2;
+}
+.brand .box .hd .paging div:hover {
+  background-color: #27ba9b;
+}
+.brand .box .hd .paging .left {
+  float: left;
+  background-image: url(../image/sprites.png);
+  background-position: -86px -105px;
+}
+.brand .box .hd .paging .right {
+  float: right;
+  background-image: url(../image/sprites.png);
+  background-position: -73px -105px;
+}
+.brand .box .bd ul li {
+  float: left;
+  padding-bottom: 45px;
+  margin-right: 5px;
+}
+.brand .box .bd ul li:last-child {
+  margin-right: 0;
+}
+.brand .box .bd ul li img {
+  width: 244px;
+}
+
 .fresh .hd {
   height: 95px;
   line-height: 95px;
@@ -185,6 +257,8 @@
 }
 .fresh .bd .left {
   float: left;
+}
+.fresh .bd .left img {
   width: 240px;
   height: 610px;
 }
