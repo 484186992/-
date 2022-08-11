@@ -1,23 +1,23 @@
-.brand .box .hd, .popular .hd, .goods .hd {
+.topic .wrapper .hd, .brand .box .hd, .popular .hd, .goods .hd {
   height: 115px;
   line-height: 115px;
   overflow: hidden;
 }
-.brand .box .hd h2, .popular .hd h2, .goods .hd h2 {
+.topic .wrapper .hd h2, .brand .box .hd h2, .popular .hd h2, .goods .hd h2 {
   float: left;
   font-size: 29px;
   font-weight: normal;
 }
-.brand .box .hd h2 span, .popular .hd h2 span, .goods .hd h2 span {
+.topic .wrapper .hd h2 span, .brand .box .hd h2 span, .popular .hd h2 span, .goods .hd h2 span {
   margin-left: 35px;
   font-size: 16px;
   color: #999;
 }
-.fresh .hd .more, .brand .box .hd a, .popular .hd a, .goods .hd a {
+.fresh .hd .more, .topic .wrapper .hd a, .brand .box .hd a, .popular .hd a, .goods .hd a {
   float: right;
   color: #999;
 }
-.fresh .hd .more::after, .brand .box .hd a::after, .popular .hd a::after, .goods .hd a::after {
+.fresh .hd .more::after, .topic .wrapper .hd a::after, .brand .box .hd a::after, .popular .hd a::after, .goods .hd a::after {
   content: "";
   display: inline-block;
   margin-top: -4px;
@@ -340,4 +340,36 @@
 }
 .fresh .bd .right ul li .box b a {
   color: #fff;
+}
+
+.topic {
+  height: 512px;
+  background-color: #f5f5f5;
+}
+.topic .wrapper .bd ul li {
+  position: relative;
+  width: 404px;
+  height: 356px;
+  background-color: #fff;
+}
+.topic .wrapper .bd ul li img {
+  width: 404px;
+}
+.topic .wrapper .bd ul li span {
+  position: absolute;
+  top: 310px;
+  left: 33px;
+  font-size: 14px;
+  color: #333;
+}
+.topic .wrapper .bd ul li span::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background-image: url(../image/sprites.png);
+  background-position: -120px -110px;
+  margin-top: -2px;
+  margin-right: 2px;
+  vertical-align: middle;
 }

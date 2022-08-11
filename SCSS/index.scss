@@ -40,6 +40,27 @@
   }
 }
 
+// 占位符  应用在最新专题的 icon 图标
+%icon {
+  position: absolute;
+  top: 310px;
+  left: 33px;
+  font-size: 14px;
+  color: #333;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 13px;
+    background-image: url(../image/sprites.png);
+    background-position: -120px -110px;
+
+    margin-top: -2px;
+    margin-right: 2px;
+    vertical-align: middle;
+  }
+}
+
 // banner图
 .banner {
   height: 500px;
@@ -431,6 +452,33 @@
                 color: #fff;
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 最新专题
+.topic {
+  height: 512px;
+  background-color: #f5f5f5;
+  .wrapper {
+    .hd {
+      @extend %title;
+    }
+    .bd {
+      ul {
+        li {
+          position: relative;
+          width: 404px;
+          height: 356px;
+          background-color: #fff;
+          img {
+            width: 404px;
+          }
+          span {
+            @extend icon;
           }
         }
       }
